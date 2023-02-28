@@ -2,6 +2,17 @@
 set -e
 cd "$(dirname "$0")"
 
+echo "By running this script. you are agreeing OpenRAIL++-M license and OpenRAIL-M license"
+echo "Stable Diffusion v1.5 - OpenRAIL++-M"
+echo "Stable Diffusion v2.1 - OpenRAIL++-M"
+echo "Anything v4.5 - OpenRAIL-M"
+echo "AbyssOrangeMix3 - OpenRAIL-M"
+echo ""
+
+read -r -p "Continue? [y/N] " response
+response=${response,,}
+if [[ ! "$response" =~ ^(yes|y)$ ]]; then exit 1; fi
+
 mkdir -p models/Stable-diffusion
 pushd models/Stable-diffusion
 
