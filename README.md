@@ -16,7 +16,7 @@ packaging userland dependencies into Docker container and running SD-Web on it w
 ## Performance
 Measured on ASUS TUF Gaming Radeon RX 6900 XT T16G D6 16GB card.
 
-* 512x512 image, 32 prompt, 126 negative prompt, DPM++ 2M Karras 20 step - 4.5 second
+* AOM3 model, 512x512 image, 32 prompt, 126 negative prompt, DPM++ 2M Karras 20 step - 4.5 second
 * Above with Hires. fix \w R-ESRGAN 4x+ Anime6B, 2x scale, 20 hires steps - 30 second
 
 ## How to use
