@@ -15,9 +15,7 @@ packaging userland dependencies into Docker container and running SD-Web on it w
 
 ### AMD Radeon 7900XTX?
 
-As of ROCm 5.4.1, there is no support for 7900XTX. However, there is a github issue which says partial 7900XTX support is landed in ROCm 5.4.2
-
-[https://github.com/RadeonOpenCompute/ROCm/issues/1880#issuecomment-1399687459](https://github.com/RadeonOpenCompute/ROCm/issues/1880#issuecomment-1399687459)
+As of ROCm 5.4.0, there is no support for 7900XTX ([wait fo ROCm 5.5.0](https://github.com/RadeonOpenCompute/ROCm/issues/1880#issuecomment-1367508214)). However, there is a github issue comment which says [partial 7900XTX support is landed in ROCm 5.4.2](https://github.com/RadeonOpenCompute/ROCm/issues/1880#issuecomment-1399687459)
 
 Unfortunately, I don't own RX7900XTX, so I can not verify weather it runs SD-Webui or not.
 
