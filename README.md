@@ -24,6 +24,6 @@ Measured on ASUS TUF Gaming Radeon RX 6900 XT T16G D6 16GB card.
 1. Clone the repository
 2. Run `git submodule update --init --recursive`
 3. Run `docker compose build`
-4. Run `download_models.sh` or, download the models by hand and put it in `models/Stable-Diffusion` directory
+4. Run `download_models.sh` or, download the models by hand and put it in `data/models/Stable-Diffusion` directory
 5. Run `docker compose up -d`
 6. Navigate to [http://localhost:3000](http://localhost:3000) and use it.
