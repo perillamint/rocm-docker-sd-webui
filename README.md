@@ -13,6 +13,14 @@ packaging userland dependencies into Docker container and running SD-Web on it w
 * Linux machine which runs decent kernel (>5.10) and Docker (\w compose support)
 * Plenty of storage space (SSD preferred)
 
+### AMD Radeon 7900XTX?
+
+As of ROCm 5.4.1, there is no support for 7900XTX. However, there is a github issue which says partial 7900XTX support is landed in ROCm 5.4.2
+
+[https://github.com/RadeonOpenCompute/ROCm/issues/1880#issuecomment-1399687459](https://github.com/RadeonOpenCompute/ROCm/issues/1880#issuecomment-1399687459)
+
+Unfortunately, I don't own RX7900XTX, so I can not verify weather it runs SD-Webui or not.
+
 ## Performance
 Measured on ASUS TUF Gaming Radeon RX 6900 XT T16G D6 16GB card.
 
