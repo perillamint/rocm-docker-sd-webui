@@ -18,8 +18,7 @@ services:
       - "seccomp=unconfined"
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
-      - "./models:/opt/sd/models"
-      - "./outputs:/opt/sd/outputs"
+      - "./data:/opt/sd/data"
       - "./cache/huggingface:/root/.cache/huggingface"
       - "./cache/miopen:/root/.cache/miopen"
     environment:

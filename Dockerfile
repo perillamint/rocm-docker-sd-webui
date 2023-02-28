@@ -13,5 +13,5 @@ ADD stable-diffusion-webui /opt/sd
 RUN python -m pip install -r requirements.txt
 RUN /bin/sh -c 'echo Downloading dependencies... this may take long time.; COMMANDLINE_ARGS="--skip-torch-cuda-test --exit" python launch.py --exit'
 
-#CMD ["/usr/bin/python3", "launch.py", "--listen", "--deepdanbooru", "--precision", "full", "--no-half"]
-CMD ["python", "launch.py", "--listen", "--deepdanbooru"]
+#CMD ["/usr/bin/python3", "launch.py", "--listen", "--deepdanbooru", "--data-dir", "/opt/sd/data", "--precision", "full", "--no-half"]
+CMD ["python", "launch.py", "--listen", "--deepdanbooru", "--data-dir", "/opt/sd/data"]
