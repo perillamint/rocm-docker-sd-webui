@@ -10,10 +10,8 @@ RUN mkdir -p /opt/sd
 WORKDIR /opt/sd
 
 ADD stable-diffusion-webui /opt/sd
-#ADD repositories /opt/sd/repositories
 RUN python -m pip install -r requirements.txt
 RUN /bin/sh -c 'echo Downloading dependencies... this may take long time.; COMMANDLINE_ARGS="--skip-torch-cuda-test --exit" python launch.py --exit'
 
 #CMD ["/usr/bin/python3", "launch.py", "--listen", "--deepdanbooru", "--precision", "full", "--no-half"]
 CMD ["python", "launch.py", "--listen", "--deepdanbooru"]
-
