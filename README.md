@@ -10,7 +10,7 @@ packaging userland dependencies into Docker container and running SD-Web on it w
 ## Requirements
 
 * AMD Graphics card supported by ROCm which has more then 16GB VRAM, such as, but not limited to, AMD Radeon Pro WX 9100 or AMD Radeon RX 6900XT 
-* Linux machine which runs decent kernel (>5.10)
+* Linux machine which runs decent kernel (>5.10) and Docker (\w compose support)
 * Plenty of storage space (SSD preferred)
 
 ## Performance
