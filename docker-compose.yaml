@@ -1,0 +1,26 @@
+services:
+  sd-web:
+    build:
+      context: .
+    image: sd-docker:rocm-5.4.2
+    restart: always
+    ports:
+      - "3000:7860"
+    devices:
+      - "/dev/kfd:/dev/kfd"
+      - "/dev/dri:/dev/dri"
+    group_add:
+      - "985" #Video
+    ipc: "host"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - "seccomp=unconfined"
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "./models:/opt/sd/models"
+      - "./outputs:/opt/sd/outputs"
+      - "./cache/huggingface:/root/.cache/huggingface"
+      - "./cache/miopen:/root/.cache/miopen"
+    environment:
+      - "TZ=Asia/Seoul"

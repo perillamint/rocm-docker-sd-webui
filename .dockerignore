@@ -1,0 +1,7 @@
+/models
+/cache
+/outputs
+.git
+Dockerfile
+docker-compose.yaml
+.dockerignore
