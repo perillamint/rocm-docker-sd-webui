@@ -9,8 +9,11 @@ ENTRYPOINT ["/tini", "--"]
 RUN mkdir -p /opt/sd
 WORKDIR /opt/sd
 
-ADD stable-diffusion-webui /opt/sd
+ADD stable-diffusion-webui/requirements.txt /opt/sd/
 RUN python -m pip install -r requirements.txt
+ADD stable-diffusion-webui/requirements_versions.txt /opt/sd/
+RUN python -m pip install -r requirements_versions.txt
+ADD stable-diffusion-webui /opt/sd
 RUN /bin/sh -c 'echo Downloading dependencies... this may take long time.; COMMANDLINE_ARGS="--skip-torch-cuda-test --exit" python launch.py --exit'
 
 #CMD ["/usr/bin/python3", "launch.py", "--listen", "--deepdanbooru", "--data-dir", "/opt/sd/data", "--precision", "full", "--no-half"]
