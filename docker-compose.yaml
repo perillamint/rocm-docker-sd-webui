@@ -19,6 +19,7 @@ services:
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
       - "./data:/opt/sd/data"
+      - "./outputs:/opt/sd/outputs"
       - "./cache/huggingface:/root/.cache/huggingface"
       - "./cache/miopen:/root/.cache/miopen"
     environment:
